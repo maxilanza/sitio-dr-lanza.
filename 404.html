@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada | Dr. Eduardo Lanza</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="alternate icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+  .error-wrap{
+    min-height:70vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:64px 24px;
+  }
+  .error-code{
+    font-family:var(--mono); font-weight:500; font-size:15px; letter-spacing:.1em; color:var(--accent);
+    text-transform:uppercase; margin-bottom:18px;
+  }
+  .error-wrap h1{ font-size:clamp(24px,3.4vw,32px); color:var(--ink); max-width:26ch; margin-bottom:14px; }
+  .error-wrap p{ font-size:16px; color:var(--ink-soft); max-width:48ch; margin-bottom:32px; }
+  .error-actions{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">EL</span>
+        <span>
+          <span class="name">Dr. Eduardo Lanza</span>
+          <span class="role">Abogado Penalista</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-el-dr-lanza.html">Sobre el Dr. Lanza</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="nav-cta" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container error-wrap">
+    <div class="error-code">Error 404</div>
+    <h1>Esta página no existe o cambió de dirección</h1>
+    <p>Puede que el link esté mal escrito o que la página se haya movido. Volvé al inicio para encontrar lo que buscás, o escribinos directamente si tenés una consulta.</p>
+    <div class="error-actions">
+      <a class="btn btn-accent" href="index.html">Volver al inicio</a>
+      <a class="btn btn-outline" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">Dr. Eduardo Lanza — Abogado Penalista · CABA</footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener" title="Escribir por WhatsApp" aria-label="Escribir por WhatsApp">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+  </a>
+
+</body>
+</html>

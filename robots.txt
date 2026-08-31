@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://singular-treacle-b8fcb5.netlify.app/sitemap.xml
