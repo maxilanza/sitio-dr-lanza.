@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Eduardo Lanza | Abogado Penalista en CABA</title>
+<meta name="description" content="Defensa penal especializada en lesiones culposas y causas por abuso sexual, con 40 años de trayectoria en CABA. Contactanos por WhatsApp.">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+  /* ---------- Estilos propios de Home ---------- */
+  .hero{padding:72px 0 56px; border-bottom:1px solid var(--border);}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:52px; align-items:center;}
+  .eyebrow{font-family:var(--sans); font-weight:700; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 16px;}
+  .hero h1{font-size:clamp(28px,4vw,40px); line-height:1.14; color:var(--ink); text-align:left;}
+  .hero p.hero-signature{font-size:18px; color:var(--ink-soft); margin:20px 0 0;}
+  .hero p.hero-signature strong{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--accent);}
+  .hero p.lead{font-size:17px; color:var(--ink-soft); max-width:46ch; margin:10px 0 30px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-stats{display:flex; gap:32px; margin-top:40px; padding-top:28px; border-top:1px solid var(--border); flex-wrap:wrap;}
+  .stat .num{font-family:var(--mono); font-weight:500; font-size:1.7rem; color:var(--accent);}
+  .stat .label{font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
+  .hero-photo{position:relative;}
+  .hero-photo .frame{border:1.5px solid var(--accent); border-radius:14px; padding:10px; box-shadow:var(--shadow);}
+  .hero-photo img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:8px; display:block;}
+  .hero-photo .cred{position:absolute; left:-18px; bottom:-18px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 18px; box-shadow:var(--shadow); max-width:220px;}
+  .hero-photo .cred .num{font-family:var(--mono); font-weight:500; font-size:1.5rem; color:var(--accent); line-height:1;}
+  .hero-photo .cred .label{font-size:11.5px; color:var(--ink-soft); margin-top:4px;}
+  @media (max-width:760px){ .hero-grid{grid-template-columns:1fr;} .hero h1, .hero p.lead, .hero-actions, .hero-stats{text-align:left;} .hero-photo{max-width:320px; margin:0 auto;} }
+
+  section{padding:64px 0;}
+  .section-head{margin-bottom:36px;}
+  .section-head .kicker{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:0 0 10px;}
+  .section-head h2{font-size:clamp(22px,3vw,28px); color:var(--ink);}
+  .section-head p{color:var(--ink-soft); font-size:15px; max-width:56ch; margin:12px 0 0;}
+
+  .diptych{display:grid; grid-template-columns:1fr 1fr; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .diptych .half{padding:36px; display:flex; flex-direction:column; gap:14px;}
+  .diptych .half:first-child{border-right:1px solid var(--border);}
+  .diptych .tag{font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:700;}
+  .diptych h3{color:var(--ink); font-size:21px;}
+  .diptych p{color:var(--ink-soft); font-size:15px; margin:0; flex:1;}
+  .diptych a{align-self:flex-start; font-weight:700; font-size:14px; text-decoration:none; color:var(--accent);}
+  @media (max-width:640px){ .diptych{grid-template-columns:1fr;} .diptych .half:first-child{border-right:none; border-bottom:1px solid var(--border);} }
+
+  .urgent-card{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; background:var(--surface-2); border-left:3px solid var(--accent); border-radius:10px; padding:22px 26px;}
+  .urgent-card .txt{display:flex; gap:14px; align-items:flex-start; max-width:520px;}
+  .urgent-card .icon{color:var(--accent); margin-top:2px;}
+  .urgent-card strong{display:block; color:var(--ink); font-size:15.5px; margin-bottom:3px;}
+  .urgent-card p{margin:0; font-size:14px; color:var(--ink-soft);}
+  .urgent-card a{color:var(--accent); font-weight:700;}
+
+  .timeline{max-width:640px; margin:0 auto;}
+  .tl-item{display:flex; gap:22px; position:relative; padding-bottom:36px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:""; position:absolute; left:17px; top:38px; bottom:0; width:1px; background:var(--border);}
+  .tl-item:last-child::before{display:none;}
+  .tl-num{width:36px; height:36px; border-radius:50%; background:var(--surface); border:1.5px solid var(--accent); color:var(--accent); font-family:var(--mono); font-weight:500; font-size:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1;}
+  .tl-text p{margin:0; font-size:15px; color:var(--ink); padding-top:6px;}
+  .step-note{text-align:center; font-size:13.5px; color:var(--ink-soft); margin-top:8px;}
+
+  .about-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:48px; align-items:center;}
+  .about-photo{position:relative; border-radius:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .about-photo img{width:100%; aspect-ratio:5/4; object-fit:cover; display:block; filter:grayscale(15%);}
+  .about-photo::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,18,32,0) 40%, rgba(11,18,32,.55) 100%);}
+  .about-txt blockquote{font-family:var(--serif); font-size:clamp(20px,2.6vw,25px); font-style:italic; color:var(--ink); margin:0 0 22px; line-height:1.4; text-wrap:balance;}
+  .about-txt p.attribution{font-size:13.5px; color:var(--ink-soft); margin:0 0 24px;}
+  .about-txt a{font-weight:700; font-size:14px; text-decoration:none;}
+  @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} }
+
+  .video-feature-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:18px;}
+  .video-stack{display:flex; flex-direction:column; gap:18px;}
+  .video-thumb{position:relative; border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:var(--surface-2);
+    box-shadow:0 8px 20px -8px rgba(0,0,0,.5); cursor:pointer; transition:transform .25s ease, box-shadow .25s ease;}
+  .video-thumb:hover{transform:translateY(-4px);}
+  .video-thumb.featured{aspect-ratio:4/3;}
+  .video-thumb img{width:100%; height:100%; object-fit:cover; opacity:.5; display:block;}
+  .play-btn{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:52px; height:52px; border-radius:50%;
+    background:var(--accent); display:flex; align-items:center; justify-content:center; color:var(--on-accent); transition:transform .2s ease;}
+  .play-btn .icon{width:20px; height:20px; margin-left:2px;}
+  .video-thumb:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
+  .video-caption{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(11,18,32,.9)); color:#fff; font-size:13px; text-align:left; padding:26px 14px 12px;}
+  @media (max-width:700px){ .video-feature-grid{grid-template-columns:1fr;} .video-thumb.featured{aspect-ratio:16/9;} }
+
+  .faq-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 40px;}
+  .faq-item{border-bottom:1px solid var(--border); padding:18px 0;}
+  .faq-item h3{font-family:var(--sans); font-weight:700; font-size:15px; color:var(--ink); margin:0 0 6px;}
+  .faq-item p{font-size:14px; margin:0; color:var(--ink-soft);}
+  @media (max-width:700px){ .faq-grid{grid-template-columns:1fr;} }
+
+  .home-trust-strip{display:flex; justify-content:center; gap:28px; flex-wrap:wrap; text-align:center; font-size:13px; color:var(--ink-soft); padding:8px 0 0;}
+  .home-trust-strip span{display:flex; align-items:center; gap:8px;}
+
+  .cta-card{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; background:var(--surface); border:1px solid var(--accent); border-radius:16px; padding:40px 44px;}
+  .cta-card h2{font-size:clamp(20px,2.6vw,25px); color:var(--ink); max-width:34ch;}
+
+  .reviews-card{max-width:520px; margin:0 auto; text-align:center; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:26px;}
+  .reviews-card h3{font-family:var(--sans); font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin:0 0 8px;}
+  .stars{font-size:19px; color:#3A4560; letter-spacing:3px; margin-bottom:8px;}
+  .reviews-card p{font-size:13px; color:var(--ink-soft); margin:0;}
+</style>
+</head>
+<body>
+
+  <div class="badge">SITIO EN CONSTRUCCIÓN — contenido final. Los enlaces "Defensa" y "Víctimas" del menú son categorías y todavía no tienen página propia.</div>
+
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">EL</span>
+        <span>
+          <span class="name">Dr. Eduardo Lanza</span>
+          <span class="role">Abogado Penalista</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="#">Defensa</a>
+        <a href="#">Víctimas</a>
+        <a href="sobre-el-dr-lanza.html">Sobre el Dr. Lanza</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="nav-cta" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Abogado penalista · CABA</p>
+        <h1>40 años de trayectoria defendiendo a quienes más lo necesitan</h1>
+        <p class="hero-signature"><strong>Dr. Eduardo Lanza</strong> — Especialista en delitos culposos y defensa por abuso sexual</p>
+        <p class="lead">Contanos tu situación. Te ayudamos a entender qué hacer, sin cargo por la primera consulta.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+          <a class="btn btn-outline" href="#urgencias">¿Es una urgencia ahora?</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="num">40</div><div class="label">años de trayectoria</div></div>
+          <div class="stat"><div class="num">16</div><div class="label">áreas de práctica</div></div>
+          <div class="stat"><div class="num">24/7</div><div class="label">línea de defensa urgente</div></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="frame">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=60" alt="Foto placeholder del Dr. Eduardo Lanza">
+        </div>
+        <div class="cred">
+          <div class="num">CABA</div>
+          <div class="label">Matriculado en el Colegio de Abogados de la Ciudad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="container">
+    <div class="section-head" style="text-align:center;">
+      <p class="kicker" style="text-align:center;">Punto de partida</p>
+      <h2 style="text-align:center;">¿Cómo podemos ayudarte?</h2>
+      <p style="margin-left:auto; margin-right:auto; text-align:center;">Dos situaciones frecuentes — decinos cuál se parece más a la tuya.</p>
+    </div>
+    <div class="diptych">
+      <div class="half">
+        <span class="tag">Defensa</span>
+        <h3>¿Te acusan de algo?</h3>
+        <p>Si te imputan un delito o te llegó una notificación, acá te explicamos qué esperar y cómo te podemos ayudar.</p>
+        <a href="#">Ver cómo te podemos ayudar →</a>
+      </div>
+      <div class="half">
+        <span class="tag">Víctimas</span>
+        <h3>¿Fuiste víctima de algo?</h3>
+        <p>Si estás atravesando una situación de hostigamiento o maltrato y no sabés qué hacer, te acompañamos en el proceso.</p>
+        <a href="#">Ver cómo te podemos ayudar →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="urgencias" style="padding-top:0; padding-bottom:0;">
+    <div class="urgent-card">
+      <div class="txt">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C3 4.67 3.67 4 4.5 4h2.71c.46 0 .86.32.97.77l1.05 4.2c.1.4-.05.82-.38 1.06l-1.83 1.34a12.5 12.5 0 0 0 5.6 5.6l1.34-1.83c.24-.33.66-.48 1.06-.38l4.2 1.05c.45.11.77.51.77.97V19.5c0 .83-.67 1.5-1.5 1.5C10.5 21 3 13.5 3 5.5Z"/></svg>
+        <div>
+          <strong>¿Es una urgencia ahora mismo?</strong>
+          <p>Detención en curso, pedido de excarcelación o audiencia en las próximas horas. <a href="defensa-urgente-excarcelaciones.html">Más información →</a></p>
+        </div>
+      </div>
+      <a class="btn btn-accent" href="tel:+541156076398">Llamá ya — 11 5607-6398</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-head" style="text-align:center;">
+      <h2 style="text-align:center;">Cómo funciona</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-num">1</div>
+        <div class="tl-text"><p>Escribinos por WhatsApp y contanos tu situación (sin cargo)</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">2</div>
+        <div class="tl-text"><p>Si es viable, coordinamos una llamada con el Dr. Lanza</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">3</div>
+        <div class="tl-text"><p>Te asesora en detalle y definen juntos los próximos pasos</p></div>
+      </div>
+    </div>
+    <p class="step-note">¿Es una urgencia real? Salteate estos pasos y llamá directo a la línea de 24hs.</p>
+  </section>
+
+  <section class="container">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=700&q=60" alt="Foto placeholder de tribunales en CABA">
+      </div>
+      <div class="about-txt">
+        <blockquote>"Con 40 años de trayectoria, acompaño a mis clientes en los momentos más difíciles del proceso penal."</blockquote>
+        <p class="attribution">— Dr. Eduardo Lanza, matriculado en el Colegio de Abogados de CABA</p>
+        <a href="sobre-el-dr-lanza.html">Conocé más sobre su trayectoria →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-head" style="text-align:center;">
+      <h2 style="text-align:center;">El Dr. Lanza en video</h2>
+      <p style="margin-left:auto; margin-right:auto; text-align:center;">Nuevo — pendiente de filmación real, esto es la maqueta del layout.</p>
+    </div>
+    <div class="video-feature-grid">
+      <div class="video-thumb featured">
+        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=700&q=60" alt="">
+        <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
+        <div class="video-caption">Cómo es una primera consulta</div>
+      </div>
+      <div class="video-stack">
+        <div class="video-thumb">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500&q=60" alt="">
+          <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
+          <div class="video-caption">Qué hacer si te imputan un delito culposo</div>
+        </div>
+        <div class="video-thumb">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500&q=60" alt="">
+          <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
+          <div class="video-caption">Por qué actuar rápido importa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-head" style="text-align:center;">
+      <h2 style="text-align:center;">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>¿La primera consulta por WhatsApp tiene costo?</h3>
+        <p>No, contarnos tu situación por WhatsApp no tiene costo. Si tu caso es viable, coordinamos una llamada con el Dr. Lanza para asesorarte en profundidad — esa instancia sí tiene un valor, que te explicamos en ese momento.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Atienden urgencias fuera de horario?</h3>
+        <p>Sí. Para situaciones urgentes —una detención en curso o una audiencia en las próximas horas— hay una línea de contacto directa disponible las 24 horas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿En qué zonas atienden?</h3>
+        <p>Atendemos en toda la Ciudad Autónoma de Buenos Aires (CABA).</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué información tengo que darles al escribir?</h3>
+        <p>Alcanza con contarnos brevemente qué pasó, en qué instancia está tu situación (denuncia, causa abierta, notificación, detención) y si hay algún plazo urgente.</p>
+      </div>
+      <div class="faq-item" style="grid-column:1 / -1; max-width:520px;">
+        <h3>¿Puedo consultar aunque no esté seguro de si necesito un abogado penalista?</h3>
+        <p>Sí, escribinos igual — te ayudamos a entender si es un tema penal y, si no lo es, te orientamos hacia quién puede ayudarte.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <p class="home-trust-strip">
+      <span><svg class="icon" style="width:16px;height:16px;color:var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>40 años de ejercicio profesional</span>
+      <span><svg class="icon" style="width:16px;height:16px;color:var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Matriculado en el Colegio de Abogados de CABA</span>
+      <span><svg class="icon" style="width:16px;height:16px;color:var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Atención en toda CABA</span>
+    </p>
+  </div>
+
+  <section class="container">
+    <div class="cta-card">
+      <h2>¿Todavía no sabés bien en qué categoría entra tu caso?</h2>
+      <a class="btn btn-whatsapp" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="reviews-card">
+      <h3>Reseñas en Google</h3>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>Todavía no tenemos reseñas cargadas — a medida que sumemos clientes, sus opiniones reales van a aparecer acá automáticamente.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">Dr. Eduardo Lanza — Abogado Penalista · CABA</footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener" title="Escribir por WhatsApp" aria-label="Escribir por WhatsApp">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+  </a>
+
+  <div class="container note"><div class="note-inner">
+    Nota: Home codeada con el sistema final (css/estilos.css compartido). Los enlaces "Defensa" y "Víctimas" del menú quedan en blanco por ahora (son categorías, no páginas individuales). "Sobre el Dr. Lanza" y "Contacto" ya enlazan a sus páginas reales. El botón de WhatsApp ya apunta al número real (11 2699-7557). Fotos y video siguen siendo placeholders de stock.
+  </div></div>
+
+</body>
+</html>

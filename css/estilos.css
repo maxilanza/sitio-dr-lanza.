@@ -1,0 +1,157 @@
+/* =========================================================
+   Dr. Eduardo Lanza — Abogado Penalista · CABA
+   Hoja de estilos base — tokens de identidad + componentes
+   compartidos por todas las páginas del sitio.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root{
+  /* Paleta — tema oscuro (variante elegida) */
+  --bg:#0B1220;
+  --surface:#121B2E;
+  --surface-2:#182238;
+  --ink:#EEF2F8;
+  --ink-soft:#9FB0C6;
+  --border:#28364E;
+  --primary:#8FADEB;
+  --primary-deep:#4F72C4;
+  --accent:#E0A458;
+  --accent-deep:#C68A3C;
+  --on-accent:#20160A;
+
+  /* Tipografía */
+  --serif:'EB Garamond', Georgia, serif;
+  --sans:'Lato', Arial, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+
+  --shadow: 0 14px 34px -14px rgba(0,0,0,.55);
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:16px;
+}
+h1,h2,h3{ font-family:var(--serif); font-weight:600; text-wrap:balance; margin:0; }
+.icon{ width:20px; height:20px; flex-shrink:0; }
+a{ color:var(--primary); }
+a:focus-visible, button:focus-visible, .btn:focus-visible{
+  outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;
+}
+.container{ max-width:1040px; margin:0 auto; padding:0 24px; }
+.container-narrow{ max-width:760px; margin:0 auto; padding:0 24px; }
+
+/* ---------- Badge de estado (solo mientras el sitio esté en construcción) ---------- */
+.badge{
+  background:var(--surface-2); color:var(--accent); text-align:center;
+  font-size:13px; padding:9px 16px; border-bottom:1px solid var(--border);
+}
+
+/* ---------- Header / navegación ---------- */
+header.site-header{ background:var(--surface-2); border-bottom:1px solid var(--border); }
+.header-row{
+  display:flex; justify-content:space-between; align-items:center; gap:20px;
+  padding:16px 24px; flex-wrap:wrap; max-width:1040px; margin:0 auto;
+}
+.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+.brand .mark{
+  width:38px; height:38px; border-radius:50%; border:1.5px solid var(--accent); color:var(--accent);
+  display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:600;
+  font-size:15px; flex-shrink:0;
+}
+.brand .name{ font-family:var(--serif); font-weight:600; font-size:18px; line-height:1.2; color:var(--ink); }
+.brand .role{ display:block; font-family:var(--sans); font-weight:400; font-size:12px; color:var(--ink-soft); }
+nav.site-nav{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
+nav.site-nav a{ color:var(--ink-soft); text-decoration:none; font-size:14px; }
+nav.site-nav a:hover, nav.site-nav a[aria-current="page"]{ color:var(--ink); }
+.nav-cta{
+  display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--on-accent);
+  text-decoration:none; font-weight:700; font-size:13.5px; padding:10px 16px; border-radius:7px; white-space:nowrap;
+}
+.nav-cta:hover{ background:var(--accent-deep); }
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; text-decoration:none;
+  padding:14px 26px; border-radius:8px; min-height:44px; border:1.5px solid transparent; cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:0 8px 18px -6px rgba(0,0,0,.5); }
+.btn-accent{ background:var(--accent); color:var(--on-accent); }
+.btn-accent:hover{ background:var(--accent-deep); }
+.btn-outline{ background:transparent; color:var(--ink); border-color:var(--border); }
+.btn-outline:hover{ background:var(--surface-2); }
+.btn-whatsapp{ background:#188540; color:#fff; }
+.btn-whatsapp:hover{ background:#136930; }
+@media (prefers-reduced-motion: reduce){
+  .btn, .video-thumb, .play-btn{ transition:none !important; }
+  .btn:hover, .video-thumb:hover{ transform:none !important; }
+}
+
+/* ---------- Breadcrumb (páginas internas) ---------- */
+.breadcrumb{ font-size:13px; color:var(--ink-soft); margin:0 0 18px; }
+.breadcrumb a{ color:var(--ink-soft); text-decoration:none; }
+.breadcrumb a:hover{ color:var(--accent); }
+.breadcrumb .sep{ color:var(--border); margin:0 6px; }
+
+/* ---------- Cápsula "Respuesta rápida" ---------- */
+.capsule{
+  background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent);
+  border-radius:10px; padding:24px 28px; margin:34px 0 8px; font-size:16.5px; color:var(--ink);
+  box-shadow:var(--shadow);
+}
+.capsule strong{ font-family:var(--serif); font-weight:600; color:var(--accent); }
+
+/* ---------- Bloques de contenido (páginas internas) ---------- */
+section.block{ padding:40px 0 0; }
+section.block h2{ font-size:22px; color:var(--ink); border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:16px; }
+section.block p{ font-size:16px; color:var(--ink-soft); margin:0; max-width:64ch; }
+
+/* ---------- Trust strip ---------- */
+.trust-strip{
+  text-align:center; font-size:13.5px; color:var(--ink-soft); padding:52px 24px 0;
+  margin-top:40px; border-top:1px solid var(--border);
+}
+
+/* ---------- Banda de CTA ---------- */
+.cta-band{ background:var(--surface-2); border-top:1px solid var(--border); text-align:center; padding:48px 24px; margin-top:24px; }
+.cta-band h2{ font-size:21px; color:var(--ink); margin:0 0 22px; }
+.btn-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+/* ---------- Footer ---------- */
+footer.site-footer{ text-align:center; font-size:13px; color:var(--ink-soft); padding:28px 24px; border-top:1px solid var(--border); }
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.whatsapp-float{
+  position:fixed; bottom:22px; right:22px; background:#188540; color:#fff; width:56px; height:56px;
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 18px -4px rgba(0,0,0,.5); text-decoration:none; z-index:20;
+}
+.whatsapp-float .icon{ width:26px; height:26px; }
+
+/* ---------- Tarjeta índice del hub (enlaza a subpáginas) ---------- */
+.index-card{
+  display:flex; flex-direction:column; gap:10px; background:var(--surface); border:1px solid var(--border);
+  border-radius:12px; padding:26px; box-shadow:var(--shadow); text-decoration:none; color:inherit;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.index-card:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.index-card h3{ color:var(--ink); font-size:19px; }
+.index-card p{ color:var(--ink-soft); font-size:14.5px; margin:0; }
+.index-card .go{ color:var(--accent); font-weight:700; font-size:13.5px; margin-top:6px; }
+.index-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:20px; }
+
+/* ---------- Nota de desarrollo (se retira al publicar) ---------- */
+.note{ margin:44px auto 0; padding:16px 24px 40px; font-size:12.5px; color:var(--accent); max-width:1040px; }
+.note-inner{ background:var(--surface-2); border:1px dashed var(--border); border-radius:8px; padding:16px 20px; }
+
+@media (max-width:640px){
+  .header-row{ flex-direction:column; align-items:flex-start; }
+  nav.site-nav{ width:100%; justify-content:flex-start; }
+}
