@@ -101,7 +101,7 @@
 </head>
 <body>
 
-  <div class="badge">SITIO EN CONSTRUCCIÓN — contenido final. Los enlaces "Defensa" y "Víctimas" del menú son categorías y todavía no tienen página propia.</div>
+  <div class="badge">SITIO EN CONSTRUCCIÓN — contenido final. Pendiente: fotos reales del Dr. Lanza y dominio propio.</div>
 
   <header class="site-header">
     <div class="header-row">
@@ -114,8 +114,25 @@
       </a>
       <nav class="site-nav" aria-label="Navegación principal">
         <a href="index.html" aria-current="page">Inicio</a>
-        <a href="#">Defensa</a>
-        <a href="#">Víctimas</a>
+        <details class="nav-drop">
+          <summary class="">Defensa <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <ul class="drop-menu">
+            <li><a href="lesiones-y-delitos-culposos/index.html">Lesiones y Delitos Culposos</a></li>
+            <li><a href="defensa-abuso-sexual.html">Abuso Sexual</a></li>
+            <li><a href="defensa-urgente-excarcelaciones.html">Defensa Urgente / Excarcelaciones</a></li>
+            <li><a href="estafas-y-defraudaciones.html">Estafas y Defraudaciones</a></li>
+            <li><a href="delitos-contra-la-administracion-publica.html">Administración Pública</a></li>
+            <li><a href="delitos-economicos-y-contrabando.html">Económico y Contrabando</a></li>
+            <li><a href="otras-areas.html">Otras Áreas</a></li>
+          </ul>
+        </details>
+        <details class="nav-drop">
+          <summary class="">Víctimas <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <ul class="drop-menu">
+            <li><a href="hostigamiento-y-maltrato.html">Hostigamiento y Maltrato</a></li>
+            <li><a href="civil-danos-y-perjuicios.html">Civil — Daños y Perjuicios</a></li>
+          </ul>
+        </details>
         <a href="sobre-el-dr-lanza.html">Sobre el Dr. Lanza</a>
         <a href="contacto.html">Contacto</a>
         <a class="nav-cta" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener">
@@ -316,6 +333,8 @@
   <div class="container note"><div class="note-inner">
     Nota: Home codeada con el sistema final (css/estilos.css compartido). Los enlaces "Defensa" y "Víctimas" del menú quedan en blanco por ahora (son categorías, no páginas individuales). "Sobre el Dr. Lanza" y "Contacto" ya enlazan a sus páginas reales. El botón de WhatsApp ya apunta al número real (11 2699-7557). Fotos y video siguen siendo placeholders de stock.
   </div></div>
+
+  <script src="js/nav.js"></script>
 
 </body>
 </html>

@@ -76,6 +76,30 @@ nav.site-nav a:hover, nav.site-nav a[aria-current="page"]{ color:var(--ink); }
 }
 .nav-cta:hover{ background:var(--accent-deep); }
 
+/* ---------- Dropdown de nav ("Defensa" / "Víctimas") ---------- */
+nav.site-nav details.nav-drop{ position:relative; }
+nav.site-nav details.nav-drop summary{
+  cursor:pointer; color:var(--ink-soft); font-size:14px; list-style:none;
+  display:flex; align-items:center; gap:5px; user-select:none;
+}
+nav.site-nav details.nav-drop summary::-webkit-details-marker{ display:none; }
+nav.site-nav details.nav-drop summary:hover{ color:var(--ink); }
+nav.site-nav details.nav-drop summary .chev{ width:9px; height:9px; flex-shrink:0; transition:transform .15s ease; }
+nav.site-nav details.nav-drop[open] summary .chev{ transform:rotate(180deg); }
+nav.site-nav details.nav-drop summary.current-section{ color:var(--ink); font-weight:700; }
+nav.site-nav details.nav-drop .drop-menu{
+  position:absolute; top:calc(100% + 14px); left:0; background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; box-shadow:var(--shadow); padding:8px; min-width:250px; z-index:30; list-style:none; margin:0;
+}
+nav.site-nav details.nav-drop .drop-menu li{ margin:0; }
+nav.site-nav details.nav-drop .drop-menu a{
+  display:block; padding:9px 12px; border-radius:6px; color:var(--ink-soft); text-decoration:none; font-size:13.5px;
+}
+nav.site-nav details.nav-drop .drop-menu a:hover{ background:var(--surface-2); color:var(--ink); }
+@media (max-width:640px){
+  nav.site-nav details.nav-drop .drop-menu{ position:static; margin-top:8px; box-shadow:none; }
+}
+
 /* ---------- Botones ---------- */
 .btn{
   display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; text-decoration:none;
