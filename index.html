@@ -92,20 +92,6 @@
   .about-txt a{font-weight:700; font-size:14px; text-decoration:none;}
   @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} }
 
-  .video-feature-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:18px;}
-  .video-stack{display:flex; flex-direction:column; gap:18px;}
-  .video-thumb{position:relative; border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:var(--surface-2);
-    box-shadow:0 8px 20px -8px rgba(0,0,0,.5); cursor:pointer; transition:transform .25s ease, box-shadow .25s ease;}
-  .video-thumb:hover{transform:translateY(-4px);}
-  .video-thumb.featured{aspect-ratio:4/3;}
-  .video-thumb img{width:100%; height:100%; object-fit:cover; opacity:.5; display:block;}
-  .play-btn{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:52px; height:52px; border-radius:50%;
-    background:var(--accent); display:flex; align-items:center; justify-content:center; color:var(--on-accent); transition:transform .2s ease;}
-  .play-btn .icon{width:20px; height:20px; margin-left:2px;}
-  .video-thumb:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
-  .video-caption{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(11,18,32,.9)); color:#fff; font-size:13px; text-align:left; padding:26px 14px 12px;}
-  @media (max-width:700px){ .video-feature-grid{grid-template-columns:1fr;} .video-thumb.featured{aspect-ratio:16/9;} }
-
   .faq-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 40px;}
   .faq-item{border-bottom:1px solid var(--border); padding:18px 0;}
   .faq-item h3{font-family:var(--sans); font-weight:700; font-size:15px; color:var(--ink); margin:0 0 6px;}
@@ -170,8 +156,6 @@
 </script>
 </head>
 <body>
-
-  <div class="badge">SITIO EN CONSTRUCCIÓN — contenido final. Pendiente: fotos reales del Dr. Lanza y dominio propio.</div>
 
   <header class="site-header">
     <div class="header-row">
@@ -314,31 +298,6 @@
     </div>
   </section>
 
-  <section class="container">
-    <div class="section-head" style="text-align:center;">
-      <h2 style="text-align:center;">El Dr. Lanza en video</h2>
-      <p style="margin-left:auto; margin-right:auto; text-align:center;">Nuevo — pendiente de filmación real, esto es la maqueta del layout.</p>
-    </div>
-    <div class="video-feature-grid">
-      <div class="video-thumb featured">
-        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=700&q=60" alt="">
-        <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
-        <div class="video-caption">Cómo es una primera consulta</div>
-      </div>
-      <div class="video-stack">
-        <div class="video-thumb">
-          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500&q=60" alt="">
-          <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
-          <div class="video-caption">Qué hacer si te imputan un delito culposo</div>
-        </div>
-        <div class="video-thumb">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500&q=60" alt="">
-          <div class="play-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg></div>
-          <div class="video-caption">Por qué actuar rápido importa</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="container">
     <div class="section-head" style="text-align:center;">
@@ -399,10 +358,6 @@
   <a class="whatsapp-float" href="https://wa.me/5491126997557?text=Hola%2C%20quiero%20consultar%20mi%20situaci%C3%B3n" target="_blank" rel="noopener" title="Escribir por WhatsApp" aria-label="Escribir por WhatsApp">
     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.35 0-2.62-.32-3.74-.9L3 21l1.9-5.76A8.5 8.5 0 1 1 21 11.5Z"/></svg>
   </a>
-
-  <div class="container note"><div class="note-inner">
-    Nota: Home codeada con el sistema final (css/estilos.css compartido). Los enlaces "Defensa" y "Víctimas" del menú quedan en blanco por ahora (son categorías, no páginas individuales). "Sobre el Dr. Lanza" y "Contacto" ya enlazan a sus páginas reales. El botón de WhatsApp ya apunta al número real (11 2699-7557). Fotos y video siguen siendo placeholders de stock.
-  </div></div>
 
   <script src="js/nav.js"></script>
 
